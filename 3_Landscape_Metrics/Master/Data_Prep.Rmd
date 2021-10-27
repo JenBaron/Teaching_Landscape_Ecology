@@ -1,0 +1,149 @@
+---
+title: "Data Prep"
+author: "Jen Baron"
+date: "9/16/2020"
+output: html_document
+---
+
+## Load Packages
+
+```{r, message=FALSE}
+library(landscapemetrics)
+library(landscapetools)
+library(dplyr)
+library(raster)
+```
+
+# Create Data Files
+
+Format:
+
+-Row count (y): 165
+-Column count (x): 165 
+-Background value: 99
+-Cell size: 30
+-Input data type: Raw ASCII grid
+
+
+https://irapoenya.wordpress.com/2019/08/12/rstudio-gis-read-esri-ascii-file-and-matrix-conversion-to-a-raster/
+
+Fix extent
+
+```{r}
+f1h <- raster(as.matrix(read.table("inputs/fire_1_high.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f1h) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f1h, "fire_1_high.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f1l <- raster(as.matrix(read.table("inputs/fire_1_low.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f1l) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f1l, "fire_1_low.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+```{r}
+f2h <- raster(as.matrix(read.table("inputs/fire_2_high.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f2h) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f2h, "fire_2_high.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f2l <- raster(as.matrix(read.table("inputs/fire_2_low.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f2l) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f2l, "fire_2_low.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f3h <- raster(as.matrix(read.table("inputs/fire_3_high.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f3h) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f3h, "fire_3_high.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f3l <- raster(as.matrix(read.table("inputs/fire_3_low.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f3l) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f3l, "fire_3_low.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f4h <- raster(as.matrix(read.table("inputs/fire_4_high.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f4h) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f4h, "fire_4_high.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f4l <- raster(as.matrix(read.table("inputs/fire_4_low.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f4l) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f4l, "fire_4_low.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f5h <- raster(as.matrix(read.table("inputs/fire_5_high.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f5h) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f5h, "fire_5_high.tif", options=c("TWS=YES"), overwrite=TRUE)
+```
+
+```{r}
+f5l <- raster(as.matrix(read.table("inputs/fire_5_low.asc")))
+#set the extent
+xmin <- 0
+ymin <- 0
+xmax<- 30*165
+ymax <- 30*165
+extent(f5l) <- extent(xmin, xmax, ymin,ymax)
+#save it as tif file format
+writeRaster(f5l, "fire_5_low.tif", options=c("TWS=YES"), overwrite=TRUE)
+```

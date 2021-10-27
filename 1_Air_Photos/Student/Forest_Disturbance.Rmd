@@ -9,7 +9,7 @@ output:
     toc_float: yes
 ---
 
-This lab is an adaptation in R of exercies 3.1 and 3.2 in Wallace, L. L & Gray, S. T. Feedbacks between organisms and ecosystem processes in Learning Landscape Ecology (1st Ed.) (2009).
+This lab is an adaptation in R of exercise 3.1 and 3.2 in Wallace, L. L & Gray, S. T. Feedbacks between organisms and ecosystem processes in Learning Landscape Ecology (1st Ed.) (2009).
 
 
 # Materials
