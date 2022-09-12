@@ -1,8 +1,11 @@
 ---
-title: "GEM500: Air Photos - Forest Disturbance"
-author: "Jen Baron | University of British Columbia, Department of Forest and Conservation Sciences  jenbaron@mail.ubc.ca"
+title: 'GEM500: Air Photos - Forest Disturbance'
+author: Jen Baron | University of British Columbia, Department of Forest and Conservation
+  Sciences  jenbaron@mail.ubc.ca
 date: "Sepetember 14, 2021"
 output:
+  word_document:
+    toc: yes
   html_document:
     theme: flatly
     toc: yes
